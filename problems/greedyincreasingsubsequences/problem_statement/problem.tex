@@ -1,0 +1,25 @@
+\problemname{Greedy Increasing Subsequences}
+
+Jimmy's homework is to find a long increasing subsequence of a given sequence $a_1, a_2, \ldots, a_n$. But the sequence is really long! Jimmy doesn't know how to do this effectively.
+
+So Jimmy takes a greedy approach. He begins by picking the first number in the sequence. Then he repeats the following rule until it no longer applies: pick the next number in the sequence that is bigger than the number he just picked.
+
+More precisely, Jimmy picks the subsequence $a_{i_1}, a_{i_2}, \ldots, a_{i_k}$ where:
+\begin{itemize}
+  \item $i_1 = 1$
+  \item For each $1 \leq j < k$, $i_{j+1}$ is the smallest index greater than $i_j$ such that $a_{i_j} < a_{i_{j+1}}$
+  \item $a_{i_k} \geq a_\ell$ for every $\ell > i_k$
+\end{itemize}
+
+Jimmy realizes that this may not produce a very long subsequence. So to help him find other subsequences, he removes $a_{i_1}, a_{i_2}, \ldots, a_{i_k}$ from the given sequence and finds another increasing subsequence using his greedy algorithm on the remaining sequence. He repeats this until he has used up all numbers from the original sequence.
+
+But even this is starting to sound exhausting for Jimmy, so he asks you to help him by finding all of the sequences that would be formed by repeatedly applying the above greedy procedure and removing the resulting subsequence until the given sequence is empty.
+
+\section*{Input}
+The first line of input contains a single integer $n$ ($1 \leq n \leq 2 
+\times 10^5$) indicating the length of the original sequence.
+
+The second line of input contains $n$ integers $a_1, a_2, \ldots, a_n$ ($0 \leq a_i \leq 10^9$).
+
+\section*{Output}
+The first line of output contains the number $s$ of sequences that are produced. The next $s$ lines contain the sequences, the $i$th such line containing the increasing subsequence that is formed in the $i$th application of the greedy algorithm.

@@ -1,0 +1,7 @@
+source: 2022 ICPC North America Regional Programming Contests (February 25, 2023)
+license: cc by-sa
+name: Food Processor
+validator_flags: float_relative_tolerance 1e-5
+author:  Andy Nguyen
+limits:
+  time_multiplier: 1.8

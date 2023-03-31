@@ -1,0 +1,7 @@
+source: 2022 ICPC North America Regional Programming Contests (February 25, 2023)
+license: cc by-sa
+name: Branch Manager
+author: Lewin Gan
+limits:
+  time_multiplier: 2.4
+  memory: 2048
